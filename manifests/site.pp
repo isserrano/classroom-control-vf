@@ -51,6 +51,6 @@ node default {
   content => "Think before you type\n",
  }
  exec { "cowsay 'Welcome to ${::fqdn}!' > /etc/motd":
-  path    => '/usr/bin',
+  path    => '/usr/local/bin',
  }
 }
