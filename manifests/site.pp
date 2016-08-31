@@ -49,5 +49,8 @@ node default {
   group   => 'root',
   mode    => '0644',
   content => "Think before you type\n",
-}
+ }
+ exec { "cowsay 'Welcome to ${::fqdn}!' > /etc/motd":
+  path    => '/usr/bin',
+ }
 }
